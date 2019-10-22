@@ -24,7 +24,31 @@ for (let i in newObj) {
 }
 
 /////////////////////////////////////////////
+
 let myObj = {
   meals: [ 'breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper' ]
 };
 console.log(myObj.meals[4]);
+
+/////////////////////////////////////////////
+
+let myArr = [
+  {
+    name: 'Anthony',
+    jobTitle: 'Worker'
+  },
+  {
+    name: 'Harrison',
+    jobTitle: 'Worker'
+  },
+  {
+    name: 'Chris',
+    jobTitle: 'Worker'
+  }
+];
+
+for (let i in myArr) {
+  console.log(myArr[i]);
+}
+
+/////////////////////////////////////////////
