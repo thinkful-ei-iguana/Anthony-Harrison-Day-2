@@ -1,7 +1,7 @@
 'use strict';
 
 function repeat(fn, n) {
-  for (i = 0; i < n; i++) {
+  for (let i = 0; i < n; i++) {
     fn();
   }
 }
@@ -14,7 +14,7 @@ function goodbye() {
   console.log('Goodbye World');
 }
 
-// repeat(goodbye, 5);
+repeat(goodbye, 5);
 
 function filter(arr, fn) {
   // TASK: Define your function here
@@ -55,8 +55,8 @@ function hazardWarningCreator(typeOfWarning) {
   };
 }
 
-// const rocksWarning = hazardWarningCreator('Rocks on the Road');
-// rocksWarning('Main St and Pacific Ave');
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+rocksWarning('Main St and Pacific Ave');
 
 let turtleArray = [ [ 0, 0 ], [ 0, 5 ], [ -1, -3 ], [ -3, 1 ], [ 2, -4 ], [ 3, 2 ] ];
 // let newArray = [];
@@ -75,21 +75,18 @@ const result_2 = turtleArray.map((coordinates) => {
 });
 
 let counter = 1;
-// result_2.forEach(num => {
-//     // let counter = counter++;
-//     if(num === 1) {
-//         console.log(`Movement #${counter}: ${num} step`);
-//     } else {
-//         console.log(`Movement #${counter}: ${num} steps`);
-//     }
-//     counter++;
-// });
+result_2.forEach((num) => {
+  if (num === 1) {
+    console.log(`Movement #${counter}: ${num} step`);
+  } else {
+    console.log(`Movement #${counter}: ${num} steps`);
+  }
+  counter++;
+});
 
 let decodeString = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
 // NO_NE
 let decodeArray = decodeString.split(' ').reduce(myFunc, '');
-
-let acc = '';
 
 function myFunc(param1, param2) {
   if (param2.length === 3) {
